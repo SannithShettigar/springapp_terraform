@@ -1,5 +1,5 @@
 output "region" {
-  value = var.region
+  value=var.region
 }
 
 output "project_name" {
@@ -11,19 +11,19 @@ output "vpc_id" {
 }
 
 output "public_subnet_az1_id" {
-  value = aws_subnet.public_subnet_az1.id
+  value=aws_subnet.private_subnet_az1.id
 }
 
 output "public_subnet_az2_id" {
-  value = aws_subnet.public_subnet_az2.id
+  value=aws_subnet.private_subnet_az2.id
 }
 
 output "private_subnet_az1_id" {
-  value = aws_subnet.private_subnet_az1.id
+  value=aws_subnet.public_subnet_az1.id
 }
 
 output "private_subnet_az2_id" {
-  value = aws_subnet.private_subnet_az2.id
+  value=aws_subnet.public_subnet_az2.id
 }
 
 output "secure_subnet_az1_id" {
@@ -31,9 +31,5 @@ output "secure_subnet_az1_id" {
 }
 
 output "secure_subnet_az2_id" {
-  value = aws_subnet.secure_subnet_az2.id
-}
-
-output "internet_gateway" {
-  value = aws_internet_gateway.internet_gateway
+    value=aws_subnet.secure_subnet_az2.id
 }
